@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+   .img{/*이미지배경 전체크기*/
+    position: relative; 
+    width: 1024px;                                                             
+    height: 768px;
+    margin:auto;
+   }
+
+  .img .content{
+    font-size: 4em;
+    margin: 10vh auto;
+    height: 0vh; 
+    text-transform: uppercase;
+
+   }
+  .Copyright {/**/
+		padding: 5px 10px;
+        color: rgb(81, 132, 228);
+		background-color:black;
+		text-align: center;
+        margin-right: 24px;
+        margin-top: -7px;
+	}
+
+ .content span {
+        display: block;
+        font-size: .4em;
+        opacity: .8;
+    }
+
+.content div {
+        position: fixed;
+        opacity: 0;
+        left: 35vw;
+        width: 60vw;
+        height: 10vw;
+        animation: switch 18s linear infinite;
+    }
+
+.content div:nth-child(2) { animation-delay: 4s}/*나타나는 시간 차. 언제 애니매이션이 시작되는냐*/
+.content div:nth-child(3) { animation-delay: 8s}
+.content div:nth-child(4) { animation-delay: 12s}
+
+
+@keyframes switch {/*투명도 조절*/
+    0% { opacity: 0;filter: blur(20px); transform:scale(12)}
+    3% { opacity: 1;filter: blur(0); transform:scale(1)}
+    10% { opacity: 1;filter: blur(0); transform:scale(.9)}
+    13% { opacity: 0;filter: blur(10px); transform:scale(.1)}
+    80% { opacity: 0}
+    100% { opacity: 0}
+    }
+
+    </style>
+
+
+
+</head>
+<body>
+    <div class="img">
+        <div class="content" onclick="location.href='MainPage.html'" style="cursor:pointer;">  
+            <div><span>서강석의</span>홈페이지에</div>
+            <div>도착하신것을<span>진심으로</span></div>
+            <div>환영합니다<span> 여기에는 오로지!</span></div>
+            <div><span>Just CSS</span> and HTML</div>
+            
+            </div>
+        <div class="img-cover"><img src="./projectPhoto/image/MainPagePhoto.jpg" ></div>
+        <div class="Copyright">
+            <p>Copyright ⓒ SEO GANG SEOK All Right Reserved</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
